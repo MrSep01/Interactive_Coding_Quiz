@@ -93,5 +93,5 @@ This project is open for contributions and is licensed under the MIT License.
 
 ## Contact 📞
 
-For inquiries, please contact [Your Name] @ your-email-AT-domain-DOT-com
+For inquiries, please contact [Your Name] @ sep.alamouti-AT-sepalamouti-DOT-com
 """
