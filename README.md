@@ -82,10 +82,9 @@ https://github.com/MrSep01/Interactive_Coding_Quiz
 
 ## Live Demo 🌐
 A live demo of the project can be accessed [here](https://mrsep01.github.io/Interactive_Coding_Quiz/).
+Screen recording 🖼️
 
-## Screenrecording 🖼️
-
-![Screen-recording](./Assets/images/quiz-app.gif)
+![Screen-recording](./Assets/images/JAVASCRIP.gif)
 
 ## License & Contribution 📜
 
