@@ -1,0 +1,171 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000066; /* Dark Blue */
+    color: white;
+    padding: 20px; /* Increased padding */
+    margin-bottom: 20px;
+}
+
+#logo-container, #title-container, #contact-container {
+    flex: 1;
+    text-align: center;
+    padding: 10px; /* New */
+}
+
+#app-logo {
+    max-width: 50px;
+    height: auto;
+}
+
+.instruction {
+    margin-top: 20px;
+    margin-bottom: 20px; /* New */
+    font-style: italic;
+    color: gold;
+    padding: 10px; /* New */
+}
+
+
+/* Rounded corners for quiz container and buttons */
+#quiz-container, #answers button, #my-scores-button, #top-scores-button {
+    border-radius: 12px;
+}
+
+#contact-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styling for the start and restart buttons */
+#start-button, #restart-button {
+    background-color: gold;
+    color: #000066; /* Dark Blue */
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    border-radius: 12px;
+}
+
+#start-button:hover, #restart-button:hover {
+    background-color: #ffcc00;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-7px);
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000066; /* Dark Blue */
+    color: #fff; /* White */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+#main-page, #save-score-page, #my-scores-page, #top-scores-page {
+    background-color: #000066;
+    border: 2px solid gold;
+    color: #ffffff;
+    padding: 20px; /* Increased padding */
+    margin: 20px 0; /* New */
+}
+
+#quiz-container {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid gold;
+    padding: 30px; /* Increased padding */
+    margin-top: 20px; /* New */
+    min-height: 200px; /* Fixed height */
+}
+
+
+#timer-box, #score-box {
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: gold;
+}
+
+#question-container {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+#question {
+    font-weight: bold;
+    font-size: 20px; /* Reduced font size */
+    white-space: nowrap; /* Prevent text from wrapping onto the next line */
+    overflow: hidden; /* Hide text that doesn't fit */
+    text-overflow: ellipsis; /* Indicate that text has been truncated */
+    max-width: 100%; /* Ensure it takes up no more than 100% width */
+}
+
+#answers {
+    margin-top: 20px; /* Space between answers and question */
+}
+
+#answers button {
+    display: inline-block;
+    margin: 5px 15px 15px 5px; /* Added bottom margin for space between buttons */
+    padding: 10px;
+    background-color: gold;
+    color: #000066;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    font-size: 16px; /* Reduced font size */
+    border-radius: 12px;
+}
+
+#notification-container {
+    padding: 10px;
+    color: red;
+    font-style: italic;
+}
+
+#my-scores-button, #top-scores-button, #go-back-from-save, #go-back-from-my-scores, #go-back-from-top-scores {
+    background-color: gold;
+    color: #000066; /* Dark Blue */
+    border: 2px solid #ffffff; /* White */
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+#reset-my-scores, #reset-top-scores {
+    background-color: red; /* Red */
+    color: white;
+    border: 2px solid #ffffff; /* White */
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/* Make it mobile responsive */
+@media only screen and (max-width: 600px) {
+    #quiz-container {
+        flex-direction: column;
+    }
+    #timer-box, #score-box, #question-container {
+        width: 100%;
+        text-align: center;
+    }
+}
