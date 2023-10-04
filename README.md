@@ -85,7 +85,7 @@ A live demo of the project can be accessed [here](https://mrsep01.github.io/Inte
 
 ## Screen recording 🖼️
 
-![Screen-recording](./Assets/images/javascript.gif)
+![Screen-shot](./Assets/images/javascript.gif)
 
 ## License & Contribution 📜
 
