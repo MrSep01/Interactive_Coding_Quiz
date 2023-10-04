@@ -78,10 +78,10 @@ Simply clone the repository, open the HTML file in a browser, and follow the on-
 This JavaScript Quiz App serves as a robust, user-friendly platform for testing JavaScript knowledge. The code is open for exploration and learning.
 
 ## Repository
-https://github.com/mrsep01/JavaScript_Quiz_App
+https://github.com/MrSep01/Interactive_Coding_Quiz
 
 ## Live Demo 🌐
-A live demo of the project can be accessed [here]().
+A live demo of the project can be accessed [here](https://mrsep01.github.io/Interactive_Coding_Quiz/).
 
 ## Screenrecording 🖼️
 
