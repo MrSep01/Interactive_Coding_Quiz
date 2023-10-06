@@ -85,7 +85,7 @@ A live demo of the project can be accessed [here](https://mrsep01.github.io/Inte
 
 ## Screen shot 🖼️
 
-![Screen-shot](./Assets/images/javascript.png)
+![Screen-shot](./assets/images/javascript.png)
 
 ## License & Contribution 📜
 
@@ -95,3 +95,4 @@ This project is open for contributions and is licensed under the MIT License.
 
 For inquiries, please contact [Your Name] @ sep.alamouti-AT-sepalamouti-DOT-com
 """
+
