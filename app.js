@@ -30,7 +30,7 @@ document.getElementById('go-back-from-top-scores').addEventListener('click', () 
 document.getElementById('restart-quiz').addEventListener('click', restartQuiz);
 
 
-
+//Function to initiate the quiz
 function startQuiz() {
     document.getElementById('restart-quiz').classList.remove('hidden');
     document.getElementById('instruction-text').textContent = "You can restart the quiz anytime by clicking on the 'Restart Quiz' button.";
@@ -42,11 +42,11 @@ function startQuiz() {
     showQuestion();
     startTimer();
 }
-
+// Function to start the timer
 function startTimer() {
     timer = setInterval(updateTimer, 1000);
 }
-
+// Function to update timer and handle timeout
 function updateTimer() {
     if (shouldCountdown) {
         timeLeft--;
@@ -58,7 +58,7 @@ function updateTimer() {
         endQuiz();
     }
 }
-
+// Functions to display the current question and answers
 function showQuestion() {
     const question = questions[currentQuestionIndex];
     questionElement.textContent = question.question;
@@ -71,7 +71,7 @@ function showQuestion() {
         answersElement.appendChild(button);
     });
 }
-
+// Function to handle selected answer and update scores
 function selectAnswer(selectedIndex) {
     const correctIndex = questions[currentQuestionIndex].correct;
 
@@ -86,11 +86,11 @@ function selectAnswer(selectedIndex) {
     updateScoreBox();
     nextQuestion();
 }
-
+// Function to update the score box
 function updateScoreBox() {
     scoreElement.textContent = `Correct: ${correctAnswers} | Wrong: ${wrongAnswers}`;
 }
-
+// Function to move to the next question or end quiz
 function nextQuestion() {
     currentQuestionIndex++;
 
@@ -101,7 +101,7 @@ function nextQuestion() {
         endQuiz();
     }
 }
-
+// Function to handle quiz end
 function endQuiz() {
     quizContainer.classList.add('hidden');
     document.getElementById('main-page').classList.add('hidden'); // Hide the main page
@@ -109,17 +109,7 @@ function endQuiz() {
     document.getElementById('save-score-page').classList.remove('hidden'); // Show the save score page
     finalScoreElement.textContent = 'Your final score is: ' + correctAnswers;
 }
-
-
-// function saveScore() {
-//     const initials = initialsInput.value;
-//     const scores = JSON.parse(localStorage.getItem('scores')) || [];
-//     scores.push({ initials, score: correctAnswers });
-//     localStorage.setItem('scores', JSON.stringify(scores));
-//     alert('Score saved!');
-//     document.getElementById('save-score-page').classList.add('hidden');
-//     document.getElementById('main-page').classList.remove('hidden');
-
+// Function to save the score to local storage
 function saveScore() {
     const initials = initialsInput.value;
     const scores = JSON.parse(localStorage.getItem('scores')) || [];
@@ -132,13 +122,13 @@ function saveScore() {
     location.reload();
 }
 
-
+// Function to show User's own scores
 function showMyScoresPage() {
     const scores = JSON.parse(localStorage.getItem('scores')) || [];
     document.getElementById('my-scores-list').innerHTML = scores.map(s => s.initials + ': ' + s.score).join('<br>');
     switchPage('my-scores-page');
 }
-
+// Function to show the top scores
 function showTopScoresPage() {
     const scores = JSON.parse(localStorage.getItem('scores')) || [];
     scores.sort((a, b) => b.score - a.score);
@@ -146,7 +136,7 @@ function showTopScoresPage() {
     document.getElementById('top-scores-list').innerHTML = topScores.map(s => s.initials + ': ' + s.score).join('<br>');
     switchPage('top-scores-page');
 }
-
+// Function to switch between different pages in the UI
 function switchPage(pageId) {
     ['main-page', 'save-score-page', 'my-scores-page', 'top-scores-page'].forEach(id => {
         document.getElementById(id).classList.add('hidden');
@@ -189,3 +179,4 @@ function restartQuiz() {
     scoreElement.textContent = "Correct: 0 | Wrong: 0";
     timerElement.textContent = "60";
 }
+
