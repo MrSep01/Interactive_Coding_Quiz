@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata and resources -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link to external stylesheet -->
 </head>
 <body>
-
+    <!-- Header Section -->
     <header class="app-header">
+        <!-- Logo Container -->
         <div id="logo-container">
-            <img src="./assets/images/logo-quiz.png" alt="App Logo" id="app-logo"> <!-- Replace with your actual logo path -->
+            <img src="./assets/images/logo-quiz.png" alt="App Logo" id="app-logo">
         </div>
+        <!-- Title Container -->
         <div id="title-container">
             <h1 id="app-title">JavaScript Quiz</h1>
         </div>
+        <!-- Contact Container -->
         <div id="contact-container">
             <a href="mailto:sep.alamouti@sepalamouti.com" id="contact-link">Contact Us</a>
         </div>
     </header>
 
-
+    <!-- Main Content -->
     <div id="main-page">
-        <div class="instruction" id="instruction-text">Press the "Start Quiz" button to begin!</div> <!-- One-line instruction -->
+        <!-- Instruction Text -->
+        <div class="instruction" id="instruction-text">Press the "Start Quiz" button to begin!</div>
+        <!-- Start Quiz Button -->
         <div id="start-screen" class="center">
-            <button id="start-button">Start Quiz</button> 
+            <button id="start-button">Start Quiz</button>
         </div>
 
-    
+        <!-- Quiz Container -->
         <div id="quiz-container" class="hidden">
+            <!-- Timer and Restart Quiz Button -->
             <div id="timer-box">
                 <div id="timer">60</div>
                 <button id="restart-quiz" class="hidden">Restart Quiz</button>
             </div>
+            <!-- Question and Answers Container -->
             <div id="question-container">
                 <div id="question"></div>
                 <div id="answers"></div>
             </div>
+            <!-- Score Display -->
             <div id="score-box">
                 <div id="score">Correct: 0 | Wrong: 0</div>
             </div>
+            <!-- Notification Area -->
             <div id="notification-container"></div>
         </div>
+        <!-- My Scores and Top Scores Buttons -->
         <button id="my-scores-button">My Scores</button>
         <button id="top-scores-button">Top Scores</button>
     </div>
+
+    <!-- Save Score Page -->
     <div id="save-score-page" class="hidden center">
         <div id="final-score"></div>
         <input type="text" id="initials" placeholder="Enter initials">
@@ -52,20 +65,25 @@
         <button id="go-back-from-save">Go Back</button>
     </div>
 
+    <!-- My Scores Page -->
     <div id="my-scores-page" class="hidden center">
         <h2>My Scores</h2>
         <div id="my-scores-list"></div>
         <button id="go-back-from-my-scores">Go Back</button>
         <button id="reset-my-scores">Reset My Scores</button>
     </div>
-    
+
+    <!-- Top Scores Page -->
     <div id="top-scores-page" class="hidden center">
         <h2>Top Scores</h2>
         <div id="top-scores-list"></div>
         <button id="go-back-from-top-scores">Go Back</button>
         <button id="reset-top-scores">Reset Top Scores</button>
     </div>
+
+    <!-- Link to external JavaScript files -->
     <script src="./assets/scripts/questions.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>
+
